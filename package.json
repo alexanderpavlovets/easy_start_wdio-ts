@@ -1,0 +1,24 @@
+{
+  "name": "default_name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio",
+    "tsc": "tsc",
+    "pretest": "npm run tsc",
+    "test": "wdio",
+    "standalone": "selenium-standalone start",
+    "hub": "selenium-standalone start -- -role hub",
+    "nodeChrome": "selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556 -browser \"browserName=chrome, maxInstances=5\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.3",
+    "@types/webdriverio": "^4.8.7",
+    "typescript": "^2.6.2",
+    "wdio-jasmine-framework": "^0.3.2",
+    "webdriverio": "^4.10.0"
+  }
+}
